@@ -1,5 +1,5 @@
 {
-  "name": "svelte-data-grid",
+  "name": "svelte-data-grid-ext",
   "description": "High-performance svelte data table component for displaying huge datasets",
   "version": "3.0.0",
   "author": {
@@ -7,7 +7,7 @@
     "email": "bsssshhhhhhh@gmail.com",
     "url": "https://github.com/bsssshhhhhhh"
   },
-  "homepage": "https://github.com/bsssshhhhhhh/svelte-data-grid",
+  "homepage": "https://github.com/eriknyk/svelte-data-grid",
   "svelte": "src/index.svelte",
   "module": "index.mjs",
   "main": "index.js",

@@ -135,6 +135,7 @@
   export let allowResizeFromTableHeaders = true; // Allow the user to clikc on table header borders to resize columns
   export let allowColumnReordering = true; // Allow the user to drag column headers to reorder columns
   export let allowColumnAffix = true; // Alow the user to affix columns to the left of the grid
+  export let onRowClick;
 
   export let __extraRows = 0; // Number of extra rows to render beyond what is visible in the scrollable area
   export let __columnHeaderResizeCaptureWidth = 20; // The width of the area on column borders that can be clicked to resize the column
@@ -993,7 +994,8 @@
         style="top: {getRowTop(row.i, rowHeight)}px; height: {rowHeight}px;
         width: {gridSpaceWidth}px;"
         role="row"
-        aria-rowindex={row.i}>
+        aria-rowindex={row.i}
+        on:click={() => (onRowClick ? onRowClick(row) : null)}>
         {#each columns as column, j}
           <div
             class="grid-cell"
